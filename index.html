@@ -22,27 +22,31 @@
   <span class="rtag">*</span> means Required field
   <br><br>
   <form>
+
   <div class="form-group">
     <label for="exampleInputEmail1">Name</label><span class="rtag">*</span> 
     <input type="text" class="form-control" id="name">    
-    <p id="namealert" style="display: none;color: red;"><small>Name is required</small></p>
+    <p id="namealert" class="alerter">Name is required</p>
   </div>
+
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label><span class="rtag">*</span>
     <input type="email" class="form-control" id="email" >
-    <p id="emailalert" style="display: none;color: red;"><small>Email is required</small></p>
+    <p id="emailalert" class="alerter"></p>
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
+
   <div class="form-group">
     <label for="exampleInputEmail1">Phone Number</label><span class="rtag">*</span>
     <input type="tel" class="form-control" id="phone" >  
-    <p id="phonealert1" style="display: none;color: red;"><small>Phone number is required</small></p> 
-    <p id="phonealert2" style="display: none;color: red;"><small>Phone number should have only numerical values</small></p>  
+    <p id="phonealert" class="alerter"></p> 
   </div>
+
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label><span class="rtag">*</span>
-    <input type="password" class="form-control" id="password1" onfocus="showinstruction()" onkeyup="passcheckerfunc()" onkeydown="passcheckerfunc()"><p id="p1alert" style="display: none;color: red;"><small>Password is required</small></p>   
+    <input type="password" class="form-control" id="password1" onfocus="showinstruction()" onkeyup="passcheckerfunc()" onkeydown="passcheckerfunc()"><p id="p1alert" class="alerter"></p>   
   </div>
+
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" onchange="showpassword()">
     <label class="form-check-label" for="exampleCheck1">Show password</label>
@@ -50,6 +54,7 @@
 
 
   <div class="pchecker">
+
     <div class="inst">
       <div class="symb">
         <div class="ch">
@@ -90,7 +95,7 @@
         </div>
       </div>
       <div class="inst-cont">
-        must contain atleast one character from @%$^&!
+        must contain atleast one character from @%$^&!#*
       </div>
     </div>
 
@@ -104,22 +109,19 @@
        must have minimum 8 characeters
       </div>
     </div>
-
    
-  </div>
+ </div>
 
   <div class="form-group">
     <label for="exampleInputPassword1">Confirm Password</label><span class="rtag">*</span>
     <input type="password" class="form-control" id="password2">
-    <p id="passwordalert" style="display: none;color: red;">Password doesn't match</p>
+    <p id="p2alert" class="alerter">Password doesn't match</p>
   </div>
 
-
-
-
-  <br>
+  
   
 </form>
+<br>
 <button class="btn btn-primary" onclick="wholefv()">Submit</button>
 
 
