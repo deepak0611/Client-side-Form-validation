@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Client-side form validation.css">
+    <script type="text/javascript" src="Client-side form validation.js"></script>
+
+    <title>Form Validation</title>
+
+    
+  </head>
+  <body>
+
+
+<div class="container" id="cont">
+  <span class="rtag">*</span> means Required field
+  <br><br>
+  <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label><span class="rtag">*</span> 
+    <input type="text" class="form-control" id="name">    
+    <p id="namealert" style="display: none;color: red;"><small>Name is required</small></p>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label><span class="rtag">*</span>
+    <input type="email" class="form-control" id="email" >
+    <p id="emailalert" style="display: none;color: red;"><small>Email is required</small></p>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Phone Number</label><span class="rtag">*</span>
+    <input type="tel" class="form-control" id="phone" >  
+    <p id="phonealert1" style="display: none;color: red;"><small>Phone number is required</small></p> 
+    <p id="phonealert2" style="display: none;color: red;"><small>Phone number should have only numerical values</small></p>  
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label><span class="rtag">*</span>
+    <input type="password" class="form-control" id="password1" onfocus="showinstruction()" onkeyup="passcheckerfunc()" onkeydown="passcheckerfunc()"><p id="p1alert" style="display: none;color: red;"><small>Password is required</small></p>   
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" onchange="showpassword()">
+    <label class="form-check-label" for="exampleCheck1">Show password</label>
+  </div>
+
+
+  <div class="pchecker">
+    <div class="inst">
+      <div class="symb">
+        <div class="ch">
+          <i class="fa fa-exclamation-circle" style="font-size:16px;color:red"></i>
+        </div>
+      </div>
+      <div class="inst-cont">
+        must contain atleast one UPPER letter
+      </div>
+    </div>
+
+    <div class="inst">
+      <div class="symb">
+        <div class="ch">
+          <i class="fa fa-exclamation-circle" style="font-size:16px;color:red"></i>
+        </div>
+      </div>
+      <div class="inst-cont">
+        must contain atleast one LOWER letter
+      </div>
+    </div>
+
+    <div class="inst">
+      <div class="symb">
+        <div class="ch">
+          <i class="fa fa-exclamation-circle" style="font-size:16px;color:red"></i>
+        </div>
+      </div>
+      <div class="inst-cont">
+       must contain atleast one Numerical value
+      </div>
+    </div>
+
+    <div class="inst">
+      <div class="symb">
+        <div class="ch">
+          <i class="fa fa-exclamation-circle" style="font-size:16px;color:red"></i>
+        </div>
+      </div>
+      <div class="inst-cont">
+        must contain atleast one character from @%$^&!
+      </div>
+    </div>
+
+    <div class="inst">
+      <div class="symb">
+        <div class="ch">
+          <i class="fa fa-exclamation-circle" style="font-size:16px;color:red"></i>
+        </div>
+      </div>
+      <div class="inst-cont">
+       must have minimum 8 characeters
+      </div>
+    </div>
+
+   
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Confirm Password</label><span class="rtag">*</span>
+    <input type="password" class="form-control" id="password2">
+    <p id="passwordalert" style="display: none;color: red;">Password doesn't match</p>
+  </div>
+
+
+
+
+  <br>
+  
+</form>
+<button class="btn btn-primary" onclick="wholefv()">Submit</button>
+
+
+</div>
+
+
+
+
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
