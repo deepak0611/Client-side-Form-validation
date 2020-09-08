@@ -50,6 +50,8 @@ function showpassword(){
   
 
 function wholefv(){
+  var validity=0;
+
   // name validation
   if(document.getElementById("name").value == ""){
     document.getElementById("namealert").style.display ="block";
@@ -58,6 +60,7 @@ function wholefv(){
   else{
     document.getElementById("namealert").style.display ="none";
     document.getElementById("name").style.borderColor="lightgrey";
+    validity+=1;
   }
 
 
@@ -90,6 +93,7 @@ function wholefv(){
       else{
         document.getElementById("phone").style.borderColor="lightgrey";
         document.getElementById("phonealert").style.display="none";
+        validity+=1;
       }
 
     }
@@ -108,6 +112,7 @@ function wholefv(){
     if(eml.indexOf('@') >0 && eml.indexOf(".com")>0 && eml.indexOf(".com") >eml.indexOf('@')){
       document.getElementById("emailalert").style.display="none";
       document.getElementById("email").style.borderColor="lightgrey";
+      validity+=1;
     }
     else{
       document.getElementById("emailalert").style.display="block";
@@ -134,6 +139,7 @@ function wholefv(){
     if(c==5){
       document.getElementById("p1alert").style.display="none";
       document.getElementById("password1").style.borderColor="lightgrey";
+      validity+=1;
     }
     else{
        document.getElementById("p1alert").style.display="block";
@@ -152,8 +158,14 @@ function wholefv(){
   else{
     document.getElementById("p2alert").style.display="none";
     document.getElementById("password2").style.borderColor="lightgrey";
+    validity+=1;
   }
 
+
+
+if(validity==5){
+  document.getElementById("submitbtn").click();
+}
 
 
 }
