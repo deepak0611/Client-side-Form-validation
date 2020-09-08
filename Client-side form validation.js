@@ -4,7 +4,7 @@
 
 var arr=[0,0,0,0,0];   
 function passcheckerfunc(){
-  
+  arr=[0,0,0,0,0];  
   var p=document.getElementById('password1').value;
   var i;
   var punc="@%$^&!#*";
