@@ -109,7 +109,7 @@ function wholefv(){
   }
   else{
     var eml=document.getElementById("email").value;
-    if(eml.indexOf('@') >0 && eml.indexOf(".com")>0 && eml.indexOf(".com") >eml.indexOf('@')){
+    if(eml.indexOf('@') >0){
       document.getElementById("emailalert").style.display="none";
       document.getElementById("email").style.borderColor="lightgrey";
       validity+=1;
